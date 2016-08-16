@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openejb-jar xmlns="http://www.openejb.org/xml/ns/openejb-jar-2.2"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openejb.org/openejb-jar/2.2 
+    	http://www.openejb.org/openejb-jar/2.2/openejb-jar.xsd">
+
+	<!-- Manage cxf features. This is now handled by class com.calmenergyinc.eo.optimizer.services.rest.RestApplication
+	<pojo-deployment class-name="com.calmenergyinc.eo.optimizer.services.rest.RestApplication">
+		<properties>
+		    cxf.jaxrs.features = org.apache.cxf.validation.BeanValidationFeature
+		</properties>
+	</pojo-deployment>
+ -->
+</openejb-jar>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+
+<resources>
+<!--
+  This configures Tomcat's resource factory to create these two DataSource resources. 
+ -->
+<Resource id="entitiesDsJta" type="javax.sql.DataSource">
+    #  http://jdbc.postgresql.org/download.html
+    JtaManaged	true
+    JdbcDriver   org.postgresql.Driver
+    JdbcUrl  jdbc:postgresql://localhost/ceojpa21
+    UserName     junk
+    Password     junk
+</Resource>
+
+<Resource id="entitiesDsNonJta" type="javax.sql.DataSource">
+    #  http://jdbc.postgresql.org/download.html
+    JtaManaged	false
+    JdbcDriver   org.postgresql.Driver
+    JdbcUrl  jdbc:postgresql://localhost/ceojpa21
+    UserName     junk
+    Password     junk
+</Resource>
+
+</resources>

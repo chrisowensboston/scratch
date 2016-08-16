@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openejb-jar xmlns="http://www.openejb.org/xml/ns/openejb-jar-2.2"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openejb.org/openejb-jar/2.2 
+    	http://www.openejb.org/openejb-jar/2.2/openejb-jar.xsd">
+</openejb-jar>

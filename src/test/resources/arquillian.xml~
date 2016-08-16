@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<arquillian xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://jboss.org/schema/arquillian"
+    xsi:schemaLocation="http://jboss.org/schema/arquillian http://www.jboss.org/schema/arquillian/arquillian_1_0.xsd">
+
+
+	<container qualifier="tomee-embedded" default="true">
+		<configuration>
+			<property name="httpPort">-1</property>
+			<property name="stopPort">-1</property>
+			<property name="dir">target/tomee-embedded</property>
+			<property name="appWorkingDir">target/arquillian</property>
+			<property name="portRange">20001-30000</property>
+			<property name = "properties">
+				openejb.classloader.forced-skip=org.xml.sax
+				openejb.provider.default = org.apache.tomee
+				openejb.ear.use-as-webcontext-base=true
+ 				openejb.classloader.forced-load=org.junit,org.apache.openejb.arquillian.tests
+				openejb.descriptors.output = true
+				openejb.validation.output.level = verbose
+				entitiesDsJtaTest = new://Resource?type=DataSource
+				entitiesDsJtaTest.JdbcDriver=org.postgresql.Driver
+				entitiesDsJtaTest.JdbcUrl=jdbc:postgresql://localhost/ceojpatest21
+				entitiesDsJtaTest.UserName=calmetest
+				entitiesDsJtaTest.Password=foible
+				entitiesDsJtaTest.JtaManaged=true
+				entitiesDsNonJtaTest = new://Resource?type=DataSource
+				entitiesDsNonJtaTest.JdbcDriver=org.postgresql.Driver
+				entitiesDsNonJtaTest.JdbcUrl=jdbc:postgresql://localhost/ceojpatest21
+				entitiesDsNonJtaTest.UserName=calmetest
+				entitiesDsNonJtaTest.Password=foible
+				entitiesDsNonJtaTest.JtaManaged=false
+				java.naming.factory.initial=org.apache.openejb.client.LocalInitialContextFactory
+				
+			</property>
+			
+		</configuration>
+	</container>
+
+</arquillian>
+   

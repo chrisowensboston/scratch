@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		 xmlns="http://java.sun.com/xml/ns/javaee" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+version="3.0">
+  <module-name>Sample</module-name>
+  <display-name>Sample</display-name>
+  <description>Sample>/description>
+ 
+  
+
+  
+ 
+  <session-config>
+    <session-timeout>10</session-timeout>
+  </session-config>
+  
+  
+
+ 
+  <error-page>
+    <exception-type>java.lang.Exception</exception-type>
+    <location>/errors/uncaughtException</location>
+  </error-page>
+  
+  <error-page>
+    <error-code>403</error-code>
+    <location>/errors/securityException</location>
+  </error-page>
+  
+  
+  <error-page>
+    <error-code>404</error-code>
+    <location>/errors/resourceNotFound</location>
+  </error-page>
+  
+
+ 
+  
+</web-app>
